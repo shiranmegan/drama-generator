@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>长公主狗血句子生成器</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- Add additional CSS in static file -->
+        
+        <link rel="stylesheet" href="static/css/styles.css">
+    </head>
+
+    <body>
+        <h1>长公主狗血句子生成器</h1>
+        <br/>
+        <p id='message'>  </p>
+        <button class='button' onclick="gen_message()">点击生成狗血句子</a>
+
+        <script>
+            let talk = ""
+            const fe = ["谢曼","明林","谢远南","王仪","明华","濮阳思弦","袁娴","冯南金","闻霏","鹿叶","梅思柔","谢莫莫","谢雪霏"];
+            const ppl=["刃一","刃十一","苍何","苍时","谢曼","苍庆之","谢子迁","明林","谢彦休","谢述","谢谦","谢远南","王漠","王仪","王携之","王谚","明华","明正藻","明彦昭","濮阳思弦","袁娴","昆巽止","宿重","冯南金","闻霏","鹿叶","谢子文","梅思柔","谢莫莫","谢雪霏","谢札","谢胜"];
+            const act = ["接吻","打架","做爱","吵架","殉情","弹琴","下棋","读话本","学习","画画","喝酒","泡茶","养花","骑马","练武功","包扎伤口","打算盘","数钱","救人","做饭","吃饭","暗杀对方","沙盘推演","赏花","偷情","打牌","修仙","搞sm","互相嘲讽","嘲讽别人","赞美对方","赞美长公主"];
+            const place = ["集市","桐宫","御书房","鹤水河畔","珍宝阁","长公主府","清音坊","西树","北狐","天香楼","屋顶上","军营里","床上","野外","后宫"];
+            const emo = ["快乐","悲伤","生气","疯狂","舒畅","小心翼翼","烦闷","兴奋","迷惑","羞耻"];
+            const act2 = ["暗中观察","阻止他们","加入他们","毫无察觉","无视他们","扣了所有人","被扣了"];
+            
+            function gen(n){
+                let i = Math.floor(Math.random() * n.length);
+                return n[i];
+            }
+
+            function gen_message(){
+                document.getElementById("message").innerHTML = gen(fe)+"和"+gen(ppl)+"在"+gen(place)+gen(emo)+"地"+gen(act)+"<br/>"+"长公主"+gen(act2);
+            }
+                
+        </script>
+    </body>
+</html>
